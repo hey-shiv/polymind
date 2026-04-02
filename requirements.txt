@@ -1,0 +1,9 @@
+torch
+matplotlib
+tokenizers
+datasets
+numpy
+gradio
+ebooklib
+beautifulsoup4
+PyMuPDF
