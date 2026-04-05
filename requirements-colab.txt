@@ -1,4 +1,4 @@
-torch
+# Keep Colab's preinstalled GPU-enabled torch.
 matplotlib
 tokenizers
 datasets
@@ -16,3 +16,5 @@ peft
 pyyaml
 sentencepiece
 safetensors
+huggingface_hub
+bitsandbytes

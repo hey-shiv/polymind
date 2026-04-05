@@ -1,0 +1,316 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+5 0 obj
+<< /Length 3656 >>
+stream
+BT /F1 16 Tf 0.05 0.05 0.05 rg 50 786 Td (PolyMind Colab Instruction Manual) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 756 Td (Purpose) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 730 Td (This manual explains exactly what you need to do to run the multi-personality PolyMind) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 715 Td (project in Google Colab.) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 692 Td (The current project supports:) Tj ET
+BT /F1 11 Tf 0 g 38 669 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 669 Td (persona-based book folders) Tj ET
+BT /F1 11 Tf 0 g 38 654 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 654 Td (automatic EPUB and PDF to TXT conversion) Tj ET
+BT /F1 11 Tf 0 g 38 639 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 639 Td (chunking and retrieval setup) Tj ET
+BT /F1 11 Tf 0 g 38 624 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 624 Td (FAISS index building) Tj ET
+BT /F1 11 Tf 0 g 38 609 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 609 Td (local embedding model download) Tj ET
+BT /F1 11 Tf 0 g 38 594 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 594 Td (local Mistral and LLaMA model download) Tj ET
+BT /F1 11 Tf 0 g 38 579 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 579 Td (side-by-side Gradio comparison UI) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 556 Td (This guide assumes:) Tj ET
+BT /F1 11 Tf 0 g 38 533 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 533 Td (you will run the project in Google Colab) Tj ET
+BT /F1 11 Tf 0 g 38 518 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 518 Td (your book files are already organized into persona folders) Tj ET
+BT /F1 11 Tf 0 g 38 503 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 503 Td (you want Mistral and LLaMA loaded locally inside Colab) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 480 Td (Folder Structure You Must Have) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 454 Td (Inside the project, keep your persona source files in these folders:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 431 Td (data/raw/books/elon_musk/) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 416 Td (data/raw/books/robert_greene/) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 401 Td (data/raw/books/steve_jobs/) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 378 Td (Accepted book formats:) Tj ET
+BT /F1 11 Tf 0 g 38 355 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 355 Td (`.txt`) Tj ET
+BT /F1 11 Tf 0 g 38 340 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 340 Td (`.epub`) Tj ET
+BT /F1 11 Tf 0 g 38 325 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 325 Td (`.pdf`) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 302 Td (If you place EPUB or PDF files in these folders, the project will automatically convert) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 287 Td (them into TXT files during setup.) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 264 Td (Recommended Colab Runtime) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 238 Td (Open Google Colab and select:) Tj ET
+BT /F1 11 Tf 0 g 38 215 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 215 Td (Runtime -> Change runtime type) Tj ET
+BT /F1 11 Tf 0 g 38 200 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 200 Td (Hardware accelerator -> GPU) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 177 Td (Using GPU is strongly recommended because Mistral and LLaMA generation will be slow on) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 162 Td (CPU.) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 139 Td (Step 1: Open the Project in Colab) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 113 Td (Upload the repository to Colab, mount Google Drive, or clone the repo into Colab.) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 90 Td (Then make sure your notebook is running from the project root directory.) Tj ET
+BT /F1 9 Tf 0.35 0.35 0.35 rg 485 24 Td (Page 1 of 5) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+7 0 obj
+<< /Length 3200 >>
+stream
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 786 Td (Step 2: Install Dependencies) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 760 Td (Run this cell:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 737 Td (!pip install -r requirements-colab.txt) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 714 Td (Important note:) Tj ET
+BT /F1 11 Tf 0 g 38 691 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 691 Td (do not replace Colab's preinstalled PyTorch unless you have a very specific reason) Tj ET
+BT /F1 11 Tf 0 g 38 676 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 676 Td (`requirements-colab.txt` is designed to keep Colab's GPU Torch intact) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 653 Td (Step 3: Add Hugging Face Token if Needed) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 627 Td (If your chosen LLaMA model is gated, set your Hugging Face token before downloading) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 612 Td (models.) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 589 Td (Run this cell:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 566 Td (import os) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 551 Td (os.environ["HF_TOKEN"] = "your_huggingface_token_here") Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 528 Td (If your selected model is public, this may not be necessary.) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 505 Td (Step 4: Make Sure the Books Are in the Correct Folders) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 479 Td (Before running the setup, verify that your persona books are inside:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 456 Td (data/raw/books/elon_musk/) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 441 Td (data/raw/books/robert_greene/) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 426 Td (data/raw/books/steve_jobs/) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 403 Td (Example:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 380 Td (data/raw/books/elon_musk/book1.pdf) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 365 Td (data/raw/books/elon_musk/interview_notes.txt) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 350 Td (data/raw/books/robert_greene/mastery.epub) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 335 Td (data/raw/books/steve_jobs/speech_notes.txt) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 312 Td (Step 5: Run Full Project Preparation) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 286 Td (Run this cell:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 263 Td (from demo.colab_quickstart import prepare_project_runtime) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 248 Td () Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 233 Td (prepare_project_runtime\() Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 218 Td (    mistral_model_id="mistralai/Mistral-7B-Instruct-v0.2",) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 203 Td (    secondary_model_id="meta-llama/Llama-3.2-3B-Instruct",) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 188 Td (\)) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 165 Td (What this setup does:) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 142 Td (1. converts EPUB and PDF files into TXT files when needed) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 127 Td (2. checks that each personality folder has usable text) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 112 Td (3. downloads the embedding model) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 97 Td (4. downloads the Mistral model into `models/mistral/merged/`) Tj ET
+BT /F1 9 Tf 0.35 0.35 0.35 rg 485 24 Td (Page 2 of 5) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+9 0 obj
+<< /Length 3533 >>
+stream
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 786 Td (5. downloads the LLaMA model into `models/llama/merged/`) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 771 Td (6. ingests and chunks all persona text) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 756 Td (7. builds FAISS retrieval indices) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 741 Td (8. refreshes the internal app pipeline cache) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 718 Td (Step 6: Launch the App) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 692 Td (Run this cell:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 669 Td (from demo.colab_quickstart import launch_app) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 654 Td (launch_app\(\)) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 631 Td (This launches the Gradio UI.) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 608 Td (In Colab, the app is configured to launch with sharing enabled automatically.) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 585 Td (Step 7: Use the Interface) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 559 Td (Inside the Gradio UI:) Tj ET
+BT /F1 11 Tf 0 g 38 536 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 536 Td (enter a question) Tj ET
+BT /F1 11 Tf 0 g 38 521 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 521 Td (set style strength) Tj ET
+BT /F1 11 Tf 0 g 38 506 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 506 Td (set top-k retrieval depth) Tj ET
+BT /F1 11 Tf 0 g 38 491 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 491 Td (optionally show trace output) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 468 Td (The app will return:) Tj ET
+BT /F1 11 Tf 0 g 38 445 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 445 Td (Elon Musk response card) Tj ET
+BT /F1 11 Tf 0 g 38 430 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 430 Td (Robert Greene response card) Tj ET
+BT /F1 11 Tf 0 g 38 415 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 415 Td (Steve Jobs response card) Tj ET
+BT /F1 11 Tf 0 g 38 400 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 400 Td (simple comparison metrics) Tj ET
+BT /F1 11 Tf 0 g 38 385 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 385 Td (routing and retrieval trace if enabled) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 362 Td (Recommended First Test Questions) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 336 Td (Use these first:) Tj ET
+BT /F1 11 Tf 0 g 38 313 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 313 Td (`What is success?`) Tj ET
+BT /F1 11 Tf 0 g 38 298 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 298 Td (`How do great builders stay focused?`) Tj ET
+BT /F1 11 Tf 0 g 38 283 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 283 Td (`How should I respond to failure?`) Tj ET
+BT /F1 11 Tf 0 g 38 268 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 268 Td (`What matters more: strategy or execution?`) Tj ET
+BT /F1 11 Tf 0 g 38 253 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 253 Td (`How do I build something meaningful?`) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 230 Td (Important Output Locations) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 204 Td (During setup and runtime, the project writes useful files here:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 181 Td (data/processed/chunks.jsonl) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 166 Td (embeddings/) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 151 Td (outputs/runs/) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 136 Td (outputs/colab_runtime_summary.json) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 113 Td (What they mean:) Tj ET
+BT /F1 11 Tf 0 g 38 90 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 90 Td (`data/processed/chunks.jsonl` = cleaned and chunked corpus) Tj ET
+BT /F1 9 Tf 0.35 0.35 0.35 rg 485 24 Td (Page 3 of 5) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+11 0 obj
+<< /Length 3610 >>
+stream
+BT /F1 11 Tf 0 g 38 786 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 786 Td (`embeddings/` = FAISS indices and retrieval metadata) Tj ET
+BT /F1 11 Tf 0 g 38 771 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 771 Td (`outputs/runs/` = saved query traces) Tj ET
+BT /F1 11 Tf 0 g 38 756 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 756 Td (`outputs/colab_runtime_summary.json` = summary of setup actions) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 733 Td (If You Want Different Models) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 707 Td (You can change the model IDs when calling `prepare_project_runtime\(...\)`.) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 684 Td (Example:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 661 Td (prepare_project_runtime\() Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 646 Td (    mistral_model_id="mistralai/Mistral-7B-Instruct-v0.2",) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 631 Td (    secondary_model_id="meta-llama/Llama-3.1-8B-Instruct",) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 616 Td (\)) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 593 Td (Only do this if your Colab runtime has enough GPU memory.) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 570 Td (Troubleshooting) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 544 Td (### Problem: setup says books are missing) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 521 Td (Check that each persona folder contains at least one supported file:) Tj ET
+BT /F1 11 Tf 0 g 38 498 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 498 Td (`.txt`) Tj ET
+BT /F1 11 Tf 0 g 38 483 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 483 Td (`.epub`) Tj ET
+BT /F1 11 Tf 0 g 38 468 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 468 Td (`.pdf`) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 445 Td (### Problem: LLaMA download fails) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 422 Td (Possible causes:) Tj ET
+BT /F1 11 Tf 0 g 38 399 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 399 Td (missing Hugging Face token) Tj ET
+BT /F1 11 Tf 0 g 38 384 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 384 Td (token does not have access to the gated model) Tj ET
+BT /F1 11 Tf 0 g 38 369 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 369 Td (incorrect model ID) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 346 Td (### Problem: FAISS or sentence-transformers import error) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 323 Td (Usually this means the dependencies were not installed correctly.) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 300 Td (Run again:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 277 Td (!pip install -r requirements-colab.txt) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 254 Td (### Problem: generation is too slow) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 231 Td (Make sure:) Tj ET
+BT /F1 11 Tf 0 g 38 208 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 208 Td (Colab GPU runtime is enabled) Tj ET
+BT /F1 11 Tf 0 g 38 193 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 193 Td (you are not running on CPU accidentally) Tj ET
+BT /F1 11 Tf 0 g 38 178 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 178 Td (model choice is reasonable for the available memory) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 155 Td (### Problem: CUDA out of memory) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 132 Td (Try one of these:) Tj ET
+BT /F1 11 Tf 0 g 38 109 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 109 Td (restart the runtime and run fewer extra cells) Tj ET
+BT /F1 11 Tf 0 g 38 94 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 94 Td (use a smaller secondary model) Tj ET
+BT /F1 11 Tf 0 g 38 79 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 79 Td (avoid unnecessarily large open notebooks and GPU allocations) Tj ET
+BT /F1 9 Tf 0.35 0.35 0.35 rg 485 24 Td (Page 4 of 5) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 11 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+13 0 obj
+<< /Length 3043 >>
+stream
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 778 Td (Minimum Practical Workflow) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 752 Td (If you want the shortest working flow, do exactly this:) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 729 Td (!pip install -r requirements-colab.txt) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 706 Td (import os) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 691 Td (os.environ["HF_TOKEN"] = "your_token_if_needed") Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 668 Td (from demo.colab_quickstart import prepare_project_runtime, launch_app) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 653 Td () Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 638 Td (prepare_project_runtime\() Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 623 Td (    mistral_model_id="mistralai/Mistral-7B-Instruct-v0.2",) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 608 Td (    secondary_model_id="meta-llama/Llama-3.2-3B-Instruct",) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 593 Td (\)) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.1 rg 62 578 Td (launch_app\(\)) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 555 Td (Final Checklist) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 529 Td (Before demoing, confirm all of these:) Tj ET
+BT /F1 11 Tf 0 g 38 506 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 506 Td (Colab runtime is GPU) Tj ET
+BT /F1 11 Tf 0 g 38 491 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 491 Td (books are inside the correct persona folders) Tj ET
+BT /F1 11 Tf 0 g 38 476 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 476 Td (dependencies installed from `requirements-colab.txt`) Tj ET
+BT /F1 11 Tf 0 g 38 461 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 461 Td (Hugging Face token set if required) Tj ET
+BT /F1 11 Tf 0 g 38 446 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 446 Td (`prepare_project_runtime\(...\)` completed successfully) Tj ET
+BT /F1 11 Tf 0 g 38 431 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 431 Td (Gradio app launches) Tj ET
+BT /F1 11 Tf 0 g 38 416 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 416 Td (one test query works end to end) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 393 Td (Main Files Behind the Workflow) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 367 Td (These are the key implementation files:) Tj ET
+BT /F1 11 Tf 0 g 38 344 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 344 Td (`demo/colab_quickstart.py`) Tj ET
+BT /F1 11 Tf 0 g 38 329 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 329 Td (`rag/ingest_books.py`) Tj ET
+BT /F1 11 Tf 0 g 38 314 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 314 Td (`rag/build_embeddings.py`) Tj ET
+BT /F1 11 Tf 0 g 38 299 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 299 Td (`rag/pipeline.py`) Tj ET
+BT /F1 11 Tf 0 g 38 284 Td (\267) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 284 Td (`ui/gradio_app.py`) Tj ET
+BT /F1 13 Tf 0.12 0.12 0.12 rg 50 261 Td (One-Line Summary) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 235 Td (Put the books in the persona folders, install `requirements-colab.txt`, run) Tj ET
+BT /F1 11 Tf 0.1 0.1 0.1 rg 50 220 Td (`prepare_project_runtime\(...\)`, then run `launch_app\(\)`.) Tj ET
+BT /F1 9 Tf 0.35 0.35 0.35 rg 485 24 Td (Page 5 of 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 13 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000148 00000 n 
+0000000218 00000 n 
+0000000286 00000 n 
+0000003994 00000 n 
+0000004130 00000 n 
+0000007382 00000 n 
+0000007518 00000 n 
+0000011103 00000 n 
+0000011240 00000 n 
+0000014903 00000 n 
+0000015041 00000 n 
+0000018137 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R >>
+startxref
+18275
+%%EOF

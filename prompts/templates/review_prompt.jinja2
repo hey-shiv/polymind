@@ -1,0 +1,17 @@
+SYSTEM:
+{{ system_prompt }}
+
+REVIEW TARGET:
+{{ answer }}
+
+TARGET PERSONA:
+{{ persona_prompt }}
+
+SUPPORTING CONTEXT:
+{{ context_text }}
+
+TASK:
+- Check groundedness.
+- Check persona consistency.
+- Check for generic filler.
+- Return a short critique and a quality score from 1 to 5.

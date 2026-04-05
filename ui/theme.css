@@ -1,0 +1,85 @@
+:root {
+  --bg-cream: #f6efe6;
+  --bg-warm: #fffaf4;
+  --ink: #1f1a16;
+  --muted: #5c544a;
+  --line: rgba(66, 55, 44, 0.14);
+  --shadow: 0 18px 40px rgba(38, 30, 21, 0.08);
+}
+
+body,
+.gradio-container {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 38%),
+    radial-gradient(circle at bottom right, rgba(214, 194, 164, 0.25), transparent 35%),
+    linear-gradient(180deg, #f7f1e7 0%, #efe6d9 100%);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.gradio-container {
+  max-width: 1400px !important;
+}
+
+.gradio-container h1,
+.gradio-container h2,
+.gradio-container h3 {
+  font-family: "IBM Plex Serif", "Iowan Old Style", Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.primary-action button {
+  background: linear-gradient(135deg, #1f6feb, #174ea6) !important;
+  border: none !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(31, 111, 235, 0.24);
+}
+
+.persona-card {
+  min-height: 100%;
+  background: rgba(255, 250, 244, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.persona-card > .prose,
+.persona-card .prose {
+  padding: 20px 22px 24px;
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+.persona-card.elon {
+  border-top: 5px solid #1f6feb;
+}
+
+.persona-card.robert {
+  border-top: 5px solid #b38728;
+}
+
+.persona-card.steve {
+  border-top: 5px solid #111111;
+}
+
+.persona-card code {
+  background: rgba(31, 26, 22, 0.08);
+  border-radius: 999px;
+  color: var(--ink);
+  padding: 0.14rem 0.45rem;
+}
+
+.persona-card strong {
+  color: #17120f;
+}
+
+.gradio-container .block {
+  border-color: var(--line);
+}
+
+.gradio-container .panel,
+.gradio-container .form {
+  background: rgba(255, 252, 247, 0.76);
+  border: 1px solid var(--line);
+}

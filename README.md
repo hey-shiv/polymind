@@ -151,3 +151,31 @@ Useful flags:
 ## Summary
 
 PolyMind remains a compact, readable LLM training project at its core, and it is set up to support the wider local AI tooling you are building around it.
+
+## Multi-Personality Colab Flow
+
+The repository now also includes a Colab-oriented multi-personality system with:
+
+- persona-organized book ingestion
+- FAISS retrieval per personality
+- prompt templates and routing
+- Mistral + LLaMA/Phi local model slots
+- a Gradio comparison UI
+
+Recommended Colab flow:
+
+```python
+!pip install -r requirements-colab.txt
+```
+
+```python
+from demo.colab_quickstart import prepare_project_runtime, launch_app
+
+prepare_project_runtime(
+    mistral_model_id="mistralai/Mistral-7B-Instruct-v0.2",
+    secondary_model_id="meta-llama/Llama-3.2-3B-Instruct",
+)
+launch_app()
+```
+
+If you use a gated Meta LLaMA model, make sure your Hugging Face token is available in the `HF_TOKEN` environment variable before calling `prepare_project_runtime(...)`.

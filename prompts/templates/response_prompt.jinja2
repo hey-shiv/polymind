@@ -7,11 +7,16 @@ PERSONA:
 USER QUESTION:
 {{ query }}
 
+EXPANDED RETRIEVAL HINTS:
+{{ expanded_query }}
+
 RETRIEVED CONTEXT:
 {{ context_text }}
 
 INSTRUCTIONS:
 - Give one grounded answer in this persona's style.
 - Use the retrieved context as evidence.
-- Avoid generic filler.
-- End with a brief actionable takeaway.
+- Stay distinct from the other personalities.
+- Keep style strength around {{ style_strength }} on a 0.0 to 1.0 scale.
+- Avoid generic filler and avoid theatrical imitation.
+- End with a brief actionable takeaway beginning with "Takeaway:".
