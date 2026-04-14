@@ -1,0 +1,35 @@
+title: "Polymind V2"
+subtitle: "RL-Enhanced Deep Reading AI System (Colab-Optimized Edition)"
+author:
+  - "Shivashant"
+date: "April 2026"
+lang: "en-US"
+documentclass: "scrbook"
+classoption:
+  - "openany"
+  - "headings=big"
+  - "numbers=noenddot"
+papersize: "a4"
+fontsize: "11pt"
+geometry:
+  - "inner=28mm"
+  - "outer=24mm"
+  - "top=24mm"
+  - "bottom=26mm"
+toc: true
+toc-depth: 2
+colorlinks: true
+edition-label: "Handbook"
+handbook-deck: >
+  A production-minded guide to building a Colab-native deep reading system
+  with retrieval engineering, bandit-based answer selection, conversational
+  memory, and restart-safe artifacts.
+titlepage-note: >
+  This edition is formatted as a long-form handbook rather than a plain export.
+  It keeps the full 23-section build path, the integrated debugging and
+  experimentation material, and the appendix reference layers while presenting
+  them in a cleaner print-first layout.
+colophon-note: >
+  Rendered from the canonical Markdown handbook with Pandoc and Tectonic using
+  a custom book template, serif body typography, sans-serif navigational
+  hierarchy, and boxed code treatment tuned for wide Colab-ready examples.

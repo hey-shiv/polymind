@@ -1,0 +1,115 @@
+$document-metadata.latex()$
+$passoptions.latex()$
+\documentclass[
+$if(fontsize)$
+  $fontsize$,
+$endif$
+$if(papersize)$
+  $papersize$paper,
+$endif$
+$for(classoption)$
+  $classoption$$sep$,
+$endfor$
+]{$documentclass$}
+
+\usepackage{xcolor}
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$endif$
+\usepackage{amsmath,amssymb}
+$fonts.latex()$
+$font-settings.latex()$
+$common.latex()$
+$for(header-includes)$
+$header-includes$
+$endfor$
+$after-header-includes.latex()$
+$hypersetup.latex()$
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=PolymindNavy,
+  urlcolor=PolymindNavy,
+  citecolor=PolymindNavy
+}
+
+\newcommand{\PolymindTitlePage}{
+  \begin{titlepage}
+    \thispagestyle{empty}
+    \vspace*{0.12\textheight}
+    {\sffamily\small\textsc{\color{PolymindGold}
+    $if(edition-label)$$edition-label$$endif$}\par}
+    \vspace{0.9cm}
+    {\sffamily\bfseries\fontsize{30}{34}\selectfont
+    \color{PolymindNavy}$title$\par}
+    $if(subtitle)$
+    \vspace{0.55cm}
+    {\sffamily\fontsize{15}{20}\selectfont
+    \color{PolymindSlate}$subtitle$\par}
+    $endif$
+    \vspace{0.9cm}
+    {\color{PolymindGold}\rule{\textwidth}{1.25pt}\par}
+    $if(handbook-deck)$
+    \vspace{1.0cm}
+    {\large\itshape\color{PolymindSlate}$handbook-deck$\par}
+    $endif$
+    \vfill
+    $if(titlepage-note)$
+    \begin{tcolorbox}[
+      colback=PolymindWarm,
+      colframe=PolymindRule,
+      borderline west={2.4pt}{0pt}{PolymindGold}
+    ]
+    \small $titlepage-note$
+    \end{tcolorbox}
+    \vspace{0.9cm}
+    $endif$
+    {\sffamily\large\color{PolymindNavy}
+    $for(author)$$author$$sep$\\$endfor$\par}
+    \vspace{0.35cm}
+    {\sffamily\color{PolymindSlate}$date$\par}
+  \end{titlepage}
+}
+
+\newcommand{\PolymindColophon}{
+  $if(colophon-note)$
+  \clearpage
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  \begin{center}
+    {\sffamily\Large\bfseries\color{PolymindNavy}
+    About This Edition\par}
+    \vspace{0.75cm}
+    \begin{minipage}{0.76\textwidth}
+      \small\RaggedRight $colophon-note$
+    \end{minipage}
+  \end{center}
+  \vspace*{\fill}
+  $endif$
+}
+
+\begin{document}
+\frontmatter
+$if(title)$
+\PolymindTitlePage
+\PolymindColophon
+$endif$
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+$if(toc)$
+\cleardoublepage
+\tableofcontents
+$endif$
+
+\mainmatter
+$body$
+
+\backmatter
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "mastery-001",
+    "question": "What is Greene's apprenticeship model in Mastery?",
+    "expected_chapter_ids": [1, 2],
+    "tags": ["single-hop", "apprenticeship", "summary"],
+    "expected_keywords": ["apprenticeship", "practice", "learning", "observation"]
+  },
+  {
+    "id": "mastery-002",
+    "question": "Why does Greene say social intelligence matters for mastery?",
+    "expected_chapter_ids": [10, 11],
+    "tags": ["single-hop", "social-intelligence", "evidence"],
+    "expected_keywords": ["social intelligence", "people", "power", "awareness"]
+  },
+  {
+    "id": "mastery-003",
+    "question": "How does Greene connect mastery and leadership?",
+    "expected_chapter_ids": [11, 12],
+    "tags": ["cross-chapter", "leadership", "synthesis"],
+    "expected_keywords": ["leadership", "influence", "mastery", "vision"]
+  },
+  {
+    "id": "mastery-004",
+    "question": "What role does strategic patience play in long-term skill building?",
+    "expected_chapter_ids": [3, 4],
+    "tags": ["single-hop", "strategy", "patience"],
+    "expected_keywords": ["strategy", "patience", "long-term", "progress"]
+  },
+  {
+    "id": "mastery-005",
+    "question": "How does Greene describe the creative-active phase?",
+    "expected_chapter_ids": [6, 7],
+    "tags": ["single-hop", "creativity", "process"],
+    "expected_keywords": ["creative-active", "experimentation", "practice", "originality"]
+  },
+  {
+    "id": "mastery-006",
+    "question": "Why does Greene value mentors and models?",
+    "expected_chapter_ids": [2, 5],
+    "tags": ["single-hop", "mentorship", "apprenticeship"],
+    "expected_keywords": ["mentor", "model", "guidance", "apprenticeship"]
+  },
+  {
+    "id": "mastery-007",
+    "question": "What dangers does Greene warn about during early apprenticeship?",
+    "expected_chapter_ids": [1, 2],
+    "tags": ["single-hop", "failure-mode", "apprenticeship"],
+    "expected_keywords": ["ego", "distraction", "discipline", "apprenticeship"]
+  },
+  {
+    "id": "mastery-008",
+    "question": "How does Greene explain intuitive intelligence?",
+    "expected_chapter_ids": [8, 9],
+    "tags": ["single-hop", "intuition", "reasoning"],
+    "expected_keywords": ["intuition", "pattern", "experience", "judgment"]
+  },
+  {
+    "id": "mastery-009",
+    "question": "Compare Greene's ideas about apprenticeship and experimentation.",
+    "expected_chapter_ids": [2, 6],
+    "tags": ["cross-chapter", "comparison", "apprenticeship"],
+    "expected_keywords": ["apprenticeship", "experimentation", "practice", "creative"]
+  },
+  {
+    "id": "mastery-010",
+    "question": "How does Greene suggest turning setbacks into useful feedback?",
+    "expected_chapter_ids": [4, 6],
+    "tags": ["single-hop", "resilience", "strategy"],
+    "expected_keywords": ["setbacks", "feedback", "adaptation", "learning"]
+  },
+  {
+    "id": "mastery-011",
+    "question": "What does Greene mean by finding your life's task?",
+    "expected_chapter_ids": [1],
+    "tags": ["single-hop", "lifes-task", "motivation"],
+    "expected_keywords": ["life's task", "inclination", "motivation", "direction"]
+  },
+  {
+    "id": "mastery-012",
+    "question": "How does Greene connect discipline with creative freedom?",
+    "expected_chapter_ids": [5, 6],
+    "tags": ["cross-chapter", "creativity", "discipline"],
+    "expected_keywords": ["discipline", "freedom", "creative", "practice"]
+  },
+  {
+    "id": "mastery-013",
+    "question": "Give a chapter-level explanation of Greene's view of social intelligence.",
+    "expected_chapter_ids": [10],
+    "tags": ["chapter-summary", "social-intelligence", "summary"],
+    "expected_keywords": ["social intelligence", "awareness", "emotion", "people"]
+  },
+  {
+    "id": "mastery-014",
+    "question": "How do observation and imitation function in Greene's method?",
+    "expected_chapter_ids": [2, 5],
+    "tags": ["single-hop", "observation", "apprenticeship"],
+    "expected_keywords": ["observation", "imitation", "model", "learning"]
+  },
+  {
+    "id": "mastery-015",
+    "question": "How does Greene distinguish surface knowledge from deep mastery?",
+    "expected_chapter_ids": [7, 8],
+    "tags": ["single-hop", "mastery", "depth"],
+    "expected_keywords": ["surface", "deep", "mastery", "intuition"]
+  },
+  {
+    "id": "mastery-016",
+    "question": "If Greene values patience, why does he still push experimentation?",
+    "expected_chapter_ids": [4, 6],
+    "tags": ["cross-chapter", "follow-up", "strategy"],
+    "expected_keywords": ["patience", "experimentation", "timing", "adaptation"]
+  },
+  {
+    "id": "mastery-017",
+    "question": "Connect Greene's ideas about mastery and power without losing grounding.",
+    "expected_chapter_ids": [10, 11, 12],
+    "tags": ["concept-link", "cross-chapter", "power"],
+    "expected_keywords": ["power", "mastery", "influence", "social intelligence"]
+  },
+  {
+    "id": "mastery-018",
+    "question": "How does Greene describe the move from dependence to independence?",
+    "expected_chapter_ids": [2, 6, 7],
+    "tags": ["cross-chapter", "progression", "independence"],
+    "expected_keywords": ["dependence", "independence", "creative-active", "skill"]
+  },
+  {
+    "id": "mastery-019",
+    "question": "What book evidence supports Greene's claim that repetition builds intuition?",
+    "expected_chapter_ids": [7, 8],
+    "tags": ["evidence", "intuition", "single-hop"],
+    "expected_keywords": ["repetition", "intuition", "pattern", "practice"]
+  },
+  {
+    "id": "mastery-020",
+    "question": "How would Greene answer a student who feels stuck in the early phase?",
+    "expected_chapter_ids": [1, 2, 4],
+    "tags": ["follow-up", "student", "application"],
+    "expected_keywords": ["apprenticeship", "discipline", "patience", "practice"]
+  },
+  {
+    "id": "mastery-021",
+    "question": "Explain Greene's view of mastery as a long-term identity transformation.",
+    "expected_chapter_ids": [1, 8, 12],
+    "tags": ["deep", "identity", "synthesis"],
+    "expected_keywords": ["identity", "transformation", "mastery", "development"]
+  },
+  {
+    "id": "mastery-022",
+    "question": "What is the relationship between self-control and social intelligence in the book?",
+    "expected_chapter_ids": [9, 10],
+    "tags": ["cross-chapter", "social-intelligence", "self-control"],
+    "expected_keywords": ["self-control", "emotion", "social intelligence", "awareness"]
+  },
+  {
+    "id": "mastery-023",
+    "question": "After reading Greene's section on mentors, how should the reader think about imitation?",
+    "expected_chapter_ids": [2, 5],
+    "tags": ["follow-up", "mentorship", "imitation"],
+    "expected_keywords": ["mentor", "imitation", "model", "adaptation"]
+  },
+  {
+    "id": "mastery-024",
+    "question": "Synthesize Greene's advice on patience, experimentation, and leadership.",
+    "expected_chapter_ids": [4, 6, 11, 12],
+    "tags": ["cross-chapter", "leadership", "synthesis"],
+    "expected_keywords": ["patience", "experimentation", "leadership", "mastery"]
+  }
+]

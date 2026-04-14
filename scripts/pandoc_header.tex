@@ -1,0 +1,126 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{bookmark}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{fvextra}
+\usepackage[most]{tcolorbox}
+\usepackage{scrlayer-scrpage}
+
+\IfFileExists{libertinus.sty}{
+  \usepackage{libertinus}
+}{
+  \IfFileExists{newpxtext.sty}{
+    \usepackage{newpxtext}
+  }{
+    \usepackage{lmodern}
+  }
+}
+
+\IfFileExists{sourcesanspro.sty}{
+  \usepackage[scale=0.94]{sourcesanspro}
+}{
+  \usepackage[scaled=0.92]{helvet}
+}
+
+\IfFileExists{zi4.sty}{
+  \usepackage[scaled=0.92]{zi4}
+}{
+  \usepackage[scaled=0.90]{beramono}
+}
+
+\definecolor{PolymindNavy}{HTML}{11263C}
+\definecolor{PolymindSlate}{HTML}{4C5E70}
+\definecolor{PolymindGold}{HTML}{A67C52}
+\definecolor{PolymindWarm}{HTML}{F6F1E8}
+\definecolor{PolymindCode}{HTML}{FBF8F2}
+\definecolor{PolymindCodeRule}{HTML}{D7C9B3}
+\definecolor{PolymindRule}{HTML}{D9D3C7}
+
+\setstretch{1.32}
+\setlength{\emergencystretch}{2.4em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\setlength{\LTpre}{0.9em}
+\setlength{\LTpost}{0.9em}
+\renewcommand{\arraystretch}{1.18}
+\sloppy
+
+\addtokomafont{disposition}{\sffamily\bfseries\color{PolymindNavy}}
+\addtokomafont{chapter}{\sffamily\bfseries\Huge\color{PolymindNavy}}
+\addtokomafont{section}{\sffamily\bfseries\Large\color{PolymindNavy}}
+\addtokomafont{subsection}{\sffamily\bfseries\large\color{PolymindSlate}}
+\addtokomafont{pageheadfoot}{\sffamily\small\color{PolymindSlate}}
+\addtokomafont{pagenumber}{\sffamily\small\color{PolymindNavy}}
+
+\RedeclareSectionCommand[
+  beforeskip=0pt,
+  afterskip=1.35\baselineskip
+]{chapter}
+\RedeclareSectionCommand[
+  beforeskip=1.6\baselineskip,
+  afterskip=0.75\baselineskip
+]{section}
+\RedeclareSectionCommand[
+  beforeskip=1.1\baselineskip,
+  afterskip=0.45\baselineskip
+]{subsection}
+
+\renewcommand*\chapterpagestyle{scrheadings}
+\clearpairofpagestyles
+\automark[section]{chapter}
+\ihead{\headmark}
+\ohead{\pagemark}
+\KOMAoptions{headsepline=0.4pt}
+
+\setlist[itemize]{
+  topsep=0.4em,
+  itemsep=0.25em,
+  leftmargin=1.4em
+}
+\setlist[enumerate]{
+  topsep=0.4em,
+  itemsep=0.25em,
+  leftmargin=1.6em
+}
+
+\tcbset{
+  enhanced,
+  breakable,
+  boxrule=0.45pt,
+  arc=2pt,
+  outer arc=2pt,
+  left=7pt,
+  right=7pt,
+  top=6pt,
+  bottom=6pt,
+  colback=PolymindCode,
+  colframe=PolymindCodeRule
+}
+
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{
+  commandchars=\\\{\},
+  breaklines=true,
+  breakanywhere=true,
+  fontsize=\footnotesize
+}
+
+\renewenvironment{Shaded}{
+  \begin{tcolorbox}[
+    borderline west={2.4pt}{0pt}{PolymindGold}
+  ]
+}{
+  \end{tcolorbox}
+}
+
+\AtBeginEnvironment{longtable}{
+  \small
+}
+
+\widowpenalty=10000
+\clubpenalty=10000

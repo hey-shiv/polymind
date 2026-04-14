@@ -1,0 +1,8 @@
+.DS_Store
+.venv/
+.pycache_tmp/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+artifacts/*
+!artifacts/.gitkeep
